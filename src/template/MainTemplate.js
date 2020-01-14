@@ -19,7 +19,6 @@ const Container = styled.main`
 `;
 
 const BottomColor = styled.div`
-  position: relative;
   width: 100%;
   height: 20px;
   background-color: #ffd42d;

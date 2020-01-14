@@ -66,7 +66,7 @@ const Home = () => (
       <SectionTitle mb="60px">Instagram</SectionTitle>
       <InstagramGallery />
     </SectionTemplate>
-    <SectionTemplate>- 1/5 -</SectionTemplate>
+    <SectionTemplate>- 1/4 -</SectionTemplate>
   </MainTemplate>
 );
 
