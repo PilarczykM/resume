@@ -15,12 +15,23 @@ const Container = styled.main`
   justify-content: center;
   text-align: center;
   background-color: #fff;
+  box-shadow: 0 10px 20px 3px rgba(0, 0, 0, 0.3);
+`;
+
+const BottomColor = styled.div`
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background-color: #ffd42d;
 `;
 
 const MainTemplate = ({ children }) => (
   <Wrapper>
     <NavSideBar />
-    <Container>{children}</Container>
+    <Container>
+      {children}
+      <BottomColor />
+    </Container>
     <SocialSidebar />
   </Wrapper>
 );
