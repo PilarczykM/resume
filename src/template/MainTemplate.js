@@ -9,9 +9,11 @@ const Wrapper = styled.div`
   margin: 150px 0;
 `;
 const Container = styled.div`
+  width: 55%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  width: 80%;
+  text-align: center;
   background-color: #fff;
 `;
 
