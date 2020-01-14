@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   justify-content: center;
   margin: 150px 0;
 `;
-const Container = styled.div`
+const Container = styled.main`
   width: 55%;
   display: flex;
   flex-direction: column;

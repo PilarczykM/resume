@@ -6,12 +6,14 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.19.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.3.0",
     "styled-components": "^4.4.1"
   },
   "scripts": {
+    "analyse": "node analyse.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -36,6 +38,7 @@
   "devDependencies": {
     "@babel/core": "^7.8.0",
     "@storybook/react": "^5.3.1",
-    "babel-loader": "^8.0.6"
+    "babel-loader": "^8.0.6",
+    "webpack-bundle-analyzer": "^3.6.0"
   }
 }
