@@ -9,13 +9,82 @@ import SectionTitle from "../../components/molecules/SectionTitle/SectionTitle";
 import ListItem from "../../components/molecules/ListItem/ListItem";
 import Item from "../../components/atoms/Item/Item";
 import SkillItem from "../../components/molecules/SkillItem/SkillItem";
+import Timeline from "../../components/atoms/Timeline/Timeline";
+import TimelineInner from "../../components/atoms/Timeline/TimelineInner";
+import TimelineItem from "../../components/atoms/Timeline/TimelineItem";
 
 const Home = () => (
   <MainTemplate>
     <SectionTemplate>
       <Title title="Resume" subtitle="Curriculum Vita" />
     </SectionTemplate>
-
+    <SectionTemplate>
+      <SectionTitle mb="60px">Expirience</SectionTitle>
+      <Timeline>
+        <TimelineInner>
+          <TimelineItem textAlign="right">
+            <Item color="#999" italic="true">
+              Jenuary 2017 - <em>Current</em>
+            </Item>
+            <Item color="black" wg="300" font="12px">
+              Test engirnier & analisys
+            </Item>
+          </TimelineItem>
+          <TimelineItem textAlign="left">
+            <Item>Planning and executing automatic tests</Item>
+            <Item>Creating tests scenatio</Item>
+            <Item>Implementing tests using C#</Item>
+            <Item>Code review</Item>
+            <Item>Raporting work results in JIRA</Item>
+            <Item>Task estimation</Item>
+            <Item>GIT</Item>
+          </TimelineItem>
+        </TimelineInner>
+      </Timeline>
+    </SectionTemplate>
+    <SectionTemplate>
+      <SectionTitle mb="60px">Education</SectionTitle>
+      <Timeline>
+        <TimelineInner>
+          <TimelineItem textAlign="right">
+            <Item color="#999" italic="true">
+              Jenuary 2017 - <em>Current</em>
+            </Item>
+            <Item color="black" wg="300" font="12px">
+              WSB - Poznań
+            </Item>
+          </TimelineItem>
+          <TimelineItem textAlign="left">
+            <Item>Planning and executing automatic tests</Item>
+            <Item>Creating tests scenatio</Item>
+            <Item>Implementing tests using C#</Item>
+            <Item>Code review</Item>
+            <Item>Raporting work results in JIRA</Item>
+            <Item>Task estimation</Item>
+            <Item>GIT</Item>
+          </TimelineItem>
+        </TimelineInner>
+        <TimelineInner>
+          <TimelineItem textAlign="right">
+            <Item color="#999" italic="true">
+              Jenuary 2017 - <em>Current</em>
+            </Item>
+            <Item color="black" wg="300" font="12px">
+              WSB - Poznań
+            </Item>
+          </TimelineItem>
+          <TimelineItem textAlign="left">
+            <Item>Planning and executing automatic tests</Item>
+            <Item>Creating tests scenatio</Item>
+            <Item>Implementing tests using C#</Item>
+            <Item>Code review</Item>
+            <Item>Raporting work results in JIRA</Item>
+            <Item>Task estimation</Item>
+            <Item>GIT</Item>
+          </TimelineItem>
+        </TimelineInner>
+      </Timeline>
+    </SectionTemplate>
     <SectionTemplate>
       <SectionTitle mb="60px">Skills</SectionTitle>
       <Styled.ListContainer>
