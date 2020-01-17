@@ -14,8 +14,7 @@ const Button = styled.div`
       ? "linear-gradient(to right, black 50%, #ffd42d 50%)"
       : "linear-gradient(to right, #ffd42d 50%, white 50%)"};
   background-size: 200% 100%;
-  background-position: ${({ active }) =>
-    active ? "left bottom" : "right bottom"};
+  background-position: right bottom;
   transition: all 0.5s ease-out;
   border: 1px solid #eaeaea;
   transition: all 0.25s ease;
@@ -41,10 +40,10 @@ const Button = styled.div`
       `};
   }
 
-  ${({ active }) =>
-    active &&
-    css`
-      &::after {
+  .activeLink> & {
+    background-position: left bottom;
+  }
+      .activeLink> &::after {
         position: absolute;
         display: block;
         content: "";
@@ -56,8 +55,6 @@ const Button = styled.div`
         transform-origin: center center;
         transform: rotate(45deg) translate(-50%, -50%);
         border: none;
-      }
-    `}
 `;
 
 export default Button;

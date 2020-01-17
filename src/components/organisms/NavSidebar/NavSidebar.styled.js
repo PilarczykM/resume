@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import Heading from "../../atoms/Heading/Heading";
 
@@ -36,7 +36,8 @@ export const StyledHeading = styled(Heading)`
   line-height: 2;
 `;
 
-export const StyledLink = styled(Link)`
+export const StyledLink = styled(NavLink)`
+  position: relative;
   text-decoration: none;
   color: inherit;
 `;

@@ -1,50 +1,27 @@
 import React from "react";
-import axios from "axios";
 
 import * as Styled from "./InstagramGallery.styled";
+import Photo1 from "../../../assets/images/34726017_1900128806717430_4873113518024425472_n.jpg";
+import Photo2 from "../../../assets/images/35276104_361819134223380_204058925639663616_n.jpg";
+import Photo3 from "../../../assets/images/36466267_401175177057661_3789266348941508608_n.jpg";
+import Photo4 from "../../../assets/images/36545834_633468033695533_1372145985538490368_n.jpg";
+import Photo5 from "../../../assets/images/36783378_655151038172635_8501520955045052416_n.jpg";
+import Photo6 from "../../../assets/images/47583952_332222334051423_4673785104831552026_n.jpg";
+import Photo7 from "../../../assets/images/47585424_522214051625737_3961951946038022491_n.jpg";
+import Photo8 from "../../../assets/images/53250697_253815682167129_1737449236139041503_n.jpg";
 
 class InstagramGallery extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      images: []
-    };
-  }
-
-  componentDidMount() {
-    axios.get("https://www.instagram.com/lurppisek93/").then(res => {
-      const jsonObject = res.data
-        .match(
-          /<script type="text\/javascript">window\._sharedData = (.*)<\/script>/
-        )[1]
-        .slice(0, -1);
-      const userInfo = JSON.parse(jsonObject);
-      const mediaArray = userInfo.entry_data.ProfilePage[0].graphql.user.edge_owner_to_timeline_media.edges.splice(
-        0,
-        10
-      );
-      for (let media of mediaArray) {
-        const node = media.node;
-
-        // Process only if is an image
-        if (node.__typename && node.__typename !== "GraphImage") {
-          continue;
-        }
-
-        // Push the thumbnail src in the array
-        this.setState({ images: [...this.state.images, node.thumbnail_src] });
-      }
-    });
-  }
-
   render() {
     return (
       <Styled.InstagramGrid>
-        {this.state.images.slice(0, 8).map((image, index) => (
-          <a key={index} href="https://www.instagram.com/lurppisek93/">
-            <Styled.InstagramImage key={index} src={image} alt="" />
-          </a>
-        ))}
+        <Styled.InstagramImage src={Photo1} alt="" />
+        <Styled.InstagramImage src={Photo2} alt="" />
+        <Styled.InstagramImage src={Photo3} alt="" />
+        <Styled.InstagramImage src={Photo4} alt="" />
+        <Styled.InstagramImage src={Photo5} alt="" />
+        <Styled.InstagramImage src={Photo6} alt="" />
+        <Styled.InstagramImage src={Photo7} alt="" />
+        <Styled.InstagramImage src={Photo8} alt="" />
       </Styled.InstagramGrid>
     );
   }

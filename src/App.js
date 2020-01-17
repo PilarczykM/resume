@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Home from "./pages/Home/Home";
 import Resume from "./pages/Resume/Resume";
+import Portfolio from "./pages/Portfolio/Portfolio";
+import Contact from "./pages/Contact/Contact";
 
 function App() {
   return (
@@ -11,8 +13,12 @@ function App() {
       <GlobalStyle />
       <Router>
         <Switch>
-          <Route path="/contact"></Route>
-          <Route path="/portfolio"></Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route path="/portfolio">
+            <Portfolio />
+          </Route>
           <Route path="/resume">
             <Resume />
           </Route>
